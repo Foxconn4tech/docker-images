@@ -22,9 +22,12 @@ RUN pip install \
     matplotlib \
     python_utils
 
+# the git reset --hard sets specific commit to be used, thus fixing version of used OD API
 RUN mkdir /libraries \
     && cd /libraries \
     && git clone https://github.com/tensorflow/models.git \
+    && cd /libraries/models \
+    && git reset --hard 637f08e \
     && rm -rf /libraries/models/.git \
     && rm -rf /libraries/models/samples \
     && rm -rf /libraries/models/tutorials \
@@ -81,4 +84,6 @@ RUN pip install \
     progressbar2 \
     scikit-image \
     fastcache \
-    unittest_data_provider
+    unittest_data_provider \
+    prettytable \
+    livestats

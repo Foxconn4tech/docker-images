@@ -85,5 +85,7 @@ RUN pip install \
     scikit-image \
     fastcache \
     unittest_data_provider \
+    pytest \
+    pytest-cov \
     prettytable \
     livestats

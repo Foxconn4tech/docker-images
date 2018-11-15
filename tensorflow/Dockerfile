@@ -20,7 +20,9 @@ RUN pip install \
     jupyter \
     setuptools \
     matplotlib \
-    python_utils
+    python_utils \
+    pytest \
+    pytest-cov
 
 RUN mkdir /libraries \
     && cd /libraries \

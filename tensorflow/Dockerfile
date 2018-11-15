@@ -20,9 +20,7 @@ RUN pip install \
     jupyter \
     setuptools \
     matplotlib \
-    python_utils \
-    pytest \
-    pytest-cov
+    python_utils
 
 RUN mkdir /libraries \
     && cd /libraries \
@@ -83,4 +81,7 @@ RUN pip install \
     progressbar2 \
     scikit-image \
     fastcache \
-    unittest_data_provider
+    unittest_data_provider \
+    pytest \
+    pytest-cov
+

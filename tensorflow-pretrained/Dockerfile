@@ -37,8 +37,8 @@ RUN mkdir deeplab/xception_65_pascal \
     && tar --strip-components=1 -zxf *.gz \
     && rm *.gz
 
-RUN mkdir deeplab/mnv2_pascal \
-    && cd deeplab/mnv2_pascal \
+RUN mkdir deeplab/mobilenetv2_pascal \
+    && cd deeplab/mobilenetv2_pascal \
     && curl http://download.tensorflow.org/models/deeplabv3_mnv2_pascal_train_aug_2018_01_29.tar.gz > out.tar.gz \
     && tar --strip-components=1 -zxf *.gz \
     && rm *.gz

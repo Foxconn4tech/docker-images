@@ -89,4 +89,5 @@ RUN pip install \
     pytest-cov \
     prettytable \
     livestats \
-    bs4
+    bs4 \
+    simplification

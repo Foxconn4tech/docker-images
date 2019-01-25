@@ -85,7 +85,7 @@ RUN pip install \
     scikit-image==0.14.1 \
     fastcache==1.0.2 \
     unittest_data_provider==1.0.1 \
-    pytest==3.5.1 \
+    pytest==3.10.1 \
     pytest-cov==2.6.1 \
     prettytable==0.7.2 \
     livestats==1.0 \

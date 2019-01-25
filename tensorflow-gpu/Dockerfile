@@ -79,14 +79,16 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 # packages we use
 RUN pip install \
-    pylint \
-    pylint_runner \
-    progressbar2 \
-    scikit-image \
-    fastcache \
-    unittest_data_provider \
-    pytest \
-    pytest-cov \
-    prettytable \
-    livestats \
-    bs4
+    pylint==2.1.1 \
+    pylint_runner==0.5.4 \
+    progressbar2==3.38.0 \
+    scikit-image==0.14.1 \
+    fastcache==1.0.2 \
+    unittest_data_provider==1.0.1 \
+    pytest==3.5.1 \
+    pytest-cov==2.6.1 \
+    prettytable==0.7.2 \
+    livestats==1.0 \
+    bs4==0.0.1 \
+    simplification==0.4.2 \
+    opencv-python==4.0.0.21

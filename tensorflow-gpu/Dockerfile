@@ -90,5 +90,5 @@ RUN pip install \
     prettytable==0.7.2 \
     livestats==1.0 \
     bs4==0.0.1 \
-    simplification==0.4.2 \
+    simplification==0.3.9 \
     opencv-python==4.0.0.21

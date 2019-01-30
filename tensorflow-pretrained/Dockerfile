@@ -41,4 +41,6 @@ RUN mkdir deeplab/mobilenetv2_pascal \
     && cd deeplab/mobilenetv2_pascal \
     && curl http://download.tensorflow.org/models/deeplabv3_mnv2_pascal_train_aug_2018_01_29.tar.gz > out.tar.gz \
     && tar --strip-components=1 -zxf *.gz \
-    && rm *.gz
+    && rm *.gz \
+    && mv model.ckpt-30000.data-00000-of-00001 model.ckpt.data-00000-of-00001 \
+    && mv model.ckpt-30000.index model.ckpt.index

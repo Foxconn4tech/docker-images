@@ -1,4 +1,5 @@
 FROM python:3.6
+# using debian stretch
 
 MAINTAINER matej.racinsky@foxconn4tech.com
 
@@ -6,10 +7,11 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     wget
 
 # must install it that way so it does not need any display, see https://stackoverflow.com/questions/46399914/how-to-use-wkhtmltopdf-with-docker
-RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
-    tar vxf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
-    cp wkhtmltox/bin/wk* /usr/local/bin/ && \
-    rm wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+RUN wget -nv -O /tmp/wkhtmltox.deb https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb && \
+    apt-get -qy install /tmp/wkhtmltox.deb && \
+    #tar vxf wkhtmltox-0.12.5_linux-generic-amd64.tar.xz && \
+    #cp wkhtmltox/bin/wk* /usr/local/bin/ && \
+    rm /tmp/wkhtmltox.deb
 # packages we use
 RUN pip install \
     Jinja2==2.10 \

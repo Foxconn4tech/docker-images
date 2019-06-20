@@ -24,4 +24,5 @@ RUN pip install \
     PyYAML==3.13 \
     jupyter==1.0.0 \
     pytest==4.2.0 \
-    pytest-cov==2.6.1
+    pytest-cov==2.6.1 \
+    css-html-js-minify==2.5.5

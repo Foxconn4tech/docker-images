@@ -25,4 +25,6 @@ RUN pip install \
     jupyter==1.0.0 \
     pytest==4.2.0 \
     pytest-cov==2.6.1 \
-    css-html-js-minify==2.5.5
+    psycopg2==2.8.3 \
+    darkskylib==0.3.91 \
+    schedule==0.6.0

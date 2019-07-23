@@ -4,7 +4,8 @@ FROM python:3.6
 MAINTAINER matej.racinsky@foxconn4tech.com
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
-    wget
+    wget \
+    postgresql-client
 
 # must install it that way so it does not need any display, see https://stackoverflow.com/questions/46399914/how-to-use-wkhtmltopdf-with-docker
 RUN wget -nv -O /tmp/wkhtmltox.deb https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb && \
@@ -27,4 +28,5 @@ RUN pip install \
     pytest-cov==2.6.1 \
     psycopg2==2.8.3 \
     darkskylib==0.3.91 \
-    schedule==0.6.0
+    schedule==0.6.0 \
+    hbmqtt==0.9.5

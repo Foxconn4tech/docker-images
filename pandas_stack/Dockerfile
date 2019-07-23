@@ -29,4 +29,4 @@ RUN pip install \
     psycopg2==2.8.3 \
     darkskylib==0.3.91 \
     schedule==0.6.0 \
-    hbmqtt==0.9.5
+    paho-mqtt==1.4.0
